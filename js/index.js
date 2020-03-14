@@ -22,6 +22,6 @@ logoHead.addEventListener("click", () => {
 const bodySelector = document.querySelector('body')
 let backgroundGrey = false
 document.querySelector('body').addEventListener('wheel', () => {
-  bodySelector.style.background = !backgroundGrey ? 'yellow' : 'white'
+  bodySelector.style.background = !backgroundGrey ? '#4C94C2' : '#22BFC4'
   backgroundGrey = !backgroundGrey ? true : false
 })
