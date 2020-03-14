@@ -46,3 +46,25 @@ imgBorder.addEventListener('dragend', event => {
     imgBorder.style.border = ''
     borderThickness = 0
 })
+
+// Load
+
+let firstImageBorder = 0
+let assending = true
+const headerImg = document.querySelector('.intro img')
+headerImg.addEventListener('load', () => {
+  setInterval(() => {
+    headerImg.style.border = `${firstImageBorder}px solid black`
+    if (assending) {
+      if (firstImageBorder === 5) {
+        assending = false
+      }
+      firstImageBorder++
+    } else {
+      if (firstImageBorder === 0) {
+        assending = true
+      }
+      firstImageBorder--
+    }
+  }, 10)
+})
