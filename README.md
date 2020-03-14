@@ -37,11 +37,11 @@ Fun Bus wants you to make their site more interactive. They are relying on you t
 	* [x] `mouseover`
 	* [ ] `keydown`
 	* [x] `wheel`
-	* [ ] `drag / drop`
+	* [x] `drag / drop`
 	* [ ] `load`
 	* [ ] `focus`
 	* [ ] `resize`
-	* [ ] `scroll`
+	* [x] `scroll`
 	* [ ] `select`
 	* [ ] `dblclick`
 
