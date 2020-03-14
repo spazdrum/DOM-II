@@ -18,3 +18,10 @@ const logoHead = document.querySelector(".main-navigation h1")
 logoHead.addEventListener("click", () => {
     logoHead.style.color = "#03b00c";
 })
+
+const bodySelector = document.querySelector('body')
+let backgroundGrey = false
+document.querySelector('body').addEventListener('wheel', () => {
+  bodySelector.style.background = !backgroundGrey ? 'yellow' : 'white'
+  backgroundGrey = !backgroundGrey ? true : false
+})
