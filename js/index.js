@@ -68,3 +68,42 @@ headerImg.addEventListener('load', () => {
     }
   }, 10)
 })
+
+//dblclick
+
+let inverted = false
+const images = document.querySelectorAll('img')
+document.querySelector('body').addEventListener('dblclick', () => {
+  images.forEach(
+    image => (image.style.filter = !inverted ? 'invert(1)' : 'invert(0)')
+  )
+  inverted = inverted ? false : true
+})
+
+//select
+
+function logSelection () {
+    const log = document.querySelectorAll(".container p")
+    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd)
+    log.textContent = `Your Selection: ${selection}`
+}
+const input = document.querySelector('.container p')
+input.addEventListener(`select`, logSelection)
+
+const headerSelector = document.querySelector('header')
+headerSelector.addEventListener('click', () => {
+  alert('header clicked')
+})
+
+// Rotate
+
+const navItems = document.querySelectorAll('nav a')
+const rotations = [...Array(navItems.length)].map(() => 30)
+navItems.forEach((item, i) =>
+  item.addEventListener('click', event => {
+    event.stopPropagation()
+    event.preventDefault()
+    item.style.transform = `rotateZ(${rotations[i]}deg)`
+    rotations[i] += 30
+  })
+)
