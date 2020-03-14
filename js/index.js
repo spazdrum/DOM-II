@@ -8,3 +8,13 @@ destHover.addEventListener("mouseenter", () => {
 destHover.addEventListener("mouseleave", () => {
     destHover.style.transform = "scale(1)"
 })
+
+const body = document.querySelector("body");
+body.addEventListener("click", () => {
+  body.style.backgroundColor="#22BFC4";
+})
+
+const logoHead = document.querySelector(".main-navigation h1")
+logoHead.addEventListener("click", () => {
+    logoHead.style.color = "#03b00c";
+})
